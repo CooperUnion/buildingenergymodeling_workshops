@@ -1,0 +1,2 @@
+# Specifying Packaged HVAC Systems
+In this final tutorial, we will use what we have learn so far from this module to specify packaged HVAC system. All these analysis that we have done so far is to eventually support the specification of a HVAC system. In this tutorial we will look at packaged HVAC units available on Home Depot and see how we can choose the right HVAC system for our shoebox building.

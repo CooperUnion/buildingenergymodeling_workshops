@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1.3. Climate Analysis Part 1: Visualizing Weather Data with CBE Clima Tool &#8212; building energy modeling workshops (Rhino &amp; Ladybug Edition)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/01_1_climate_p1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.4. Climate Analysis Part 2: Visualize Climate Data" href="01_2_climate_p2.html" />
+    <link rel="prev" title="1. Climate Analysis" href="01_climate.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">building energy modeling workshops (Rhino & Ladybug Edition)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Arch134b workshops
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="01_climate.html">1. Climate Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.3. Climate Analysis Part 1: Visualizing Weather Data with CBE Clima Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_2_climate_p2.html">1.4. Climate Analysis Part 2: Visualize Climate Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="02_shoebox.html">2. Shoebox Model</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_1_shoebox_p1.html">2.3. Shoebox Model-Part 1: 3D BIM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_2_shoebox_p2.html">2.4. Shoebox Model-Part 2: Defining the Thermal Properties of the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_3_shoebox_p3.html">2.5. Shoebox Model-Part 3: OpenStudio Model Schedules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_4_shoebox_p4.html">2.6. Shoebox Model-Part 4: OpenStudio Model Constructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_5_shoebox_p5.html">2.7. Shoebox Model-Part 5: Visualization of Results</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="07_shoebox_flrspace.html">3. Shoebox Model Using only OpenStudio and its Geometry Editor FloorspaceJS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="07_1_shoebox_flrspace_p1.html">3.1. Shoebox Model with OpenStudio-Part 1: Building the 3D Model</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="03_cmf.html">4. Designing for Thermal Comfort</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_1_cmf_p1.html">4.1. Thermal Comfort Model Part 1: Predicting Thermal Comfort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_2_cmf_p2.html">4.2. Thermal Comfort Model Part 2: Visualizing Thermal Comfort and Energy Reduction</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="04_psvdgn.html">5. Evaluating Passive HVAC Design Strategies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_1_psvdgn_p1.html">5.1. Evaluating Passive HVAC Design Strategies Part 1: Designing Windows and Shade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_2_psvdgn_p2.html">5.2. Evaluating Passive HVAC Design Strategies Part 2: Testing Shading Design Using Energy Simulation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="05_hvac.html">6. Evaluating HVAC Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_1_hvac_p1.html">6.1. Evaluating HVAC Systems Part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_2_hvac_p2.html">6.2. Evaluating HVAC Systems Part 2: Visualization</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="06_spec_hvac.html">7. Specifying Packaged HVAC Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="06_1_spec_hvac_p1.html">7.1. Specifying Packaged HVAC Systems Part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_2_spec_hvac_p2.html">7.2. Specifying Packaged HVAC Systems Part 1</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/gaudi369/buildingenergymodeling_workshops" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/gaudi369/buildingenergymodeling_workshops/issues/new?title=Issue%20on%20page%20%2Fdocs/01_1_climate_p1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/01_1_climate_p1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Climate Analysis Part 1: Visualizing Weather Data with CBE Clima Tool</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-weather-file">1.3.1. Get weather file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-weather-file-with-cbe-clima-tool">1.3.2. Load weather file with CBE Clima Tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-and-humidity">1.3.3. Temperature and humidity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sun-wind-natural-ventilation-and-outdoor-comfort">1.3.4. Sun, wind, natural ventilation and outdoor comfort</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="climate-analysis-part-1-visualizing-weather-data-with-cbe-clima-tool">
+<h1><span class="section-number">1.3. </span>Climate Analysis Part 1: Visualizing Weather Data with CBE Clima Tool<a class="headerlink" href="#climate-analysis-part-1-visualizing-weather-data-with-cbe-clima-tool" title="Link to this heading">#</a></h1>
+<section id="get-weather-file">
+<h2><span class="section-number">1.3.1. </span>Get weather file<a class="headerlink" href="#get-weather-file" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Go to <a href="https://climate.onebuilding.org/" target="_blank">climate.onebuilding.org</a>. Go to North-Central America-Region 4 -&gt; North America USA - United States of America.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_1.png"><img alt="../_images/clima1_1.png" class="align-center" src="../_images/clima1_1.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="2">
+<li><p>At the United States page. We will use ‘ctrl+f’ to search for ‘manhattan’. It is the 13/14 search as shown below. Click on the link and download it.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_2.png"><img alt="../_images/clima1_2.png" class="align-center" src="../_images/clima1_2.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="3">
+<li><p>Unzip the file. You will see 7 files. We will only be using the data from the .epw file. Here is a brief description of the files.</p></li>
+</ol>
+<ul class="simple">
+<li><p>.clm: weather file for the simulation software ESP-r</p></li>
+<li><p>.wea: weather file for the daylight simulation software daysim</p></li>
+<li><p>.PVSyst: weather file for the daylight simulation software PVsyst</p></li>
+<li><p>.ddy: design day file</p></li>
+<li><p>.rain: precipation data in m/hr if available</p></li>
+<li><p>.stat: energyplus weather statistics</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/clima1_3.png"><img alt="../_images/clima1_3.png" class="align-center" src="../_images/clima1_3.png" style="width: 100%;" />
+</a>
+</section>
+<section id="load-weather-file-with-cbe-clima-tool">
+<h2><span class="section-number">1.3.2. </span>Load weather file with CBE Clima Tool<a class="headerlink" href="#load-weather-file-with-cbe-clima-tool" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Now we will go to the <a href="https://clima.cbe.berkeley.edu/" target="_blank">CBE Clima Tool</a>. At the page, click on ‘Drag and Drop or Select an EPW file from your computer’ and select the New York Manhattan file .epw file we downloaded.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_4.png"><img alt="../_images/clima1_4.png" class="align-center" src="../_images/clima1_4.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="2">
+<li><p>It will load the weather file as shown below.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_5.png"><img alt="../_images/clima1_5.png" class="align-center" src="../_images/clima1_5.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="3">
+<li><p>Go to the ‘Climate Summary’ tab. We can see a brief summary of the climate. We can see the koppen geiger climate classification. New York is classified as Cfa. Which means C(Temperate), f(No dry season) and a(hot summer) <a href="https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification#Overview" target="_blank">reference table</a>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_6.png"><img alt="../_images/clima1_6.png" class="align-center" src="../_images/clima1_6.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="4">
+<li><p>Scroll down and you will see the ‘Heating and Cooling Degree Days’ section. Adjust the HDD setpoint to 18 degC and CDD setpoint to 25 degC and press submit. Looking at the graph you will have a sense if the climate is a heating or cooling dominant climate. For the case of New York, it is obviously a heating dominant climate.</p></li>
+</ol>
+<ul class="simple">
+<li><p>However it is important to note, CDD is not a good indication for how much cooling is required, as a majority of cooling is dehumidification which is not capture by the dry bulb temperature.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/clima1_7.png"><img alt="../_images/clima1_7.png" class="align-center" src="../_images/clima1_7.png" style="width: 100%;" />
+</a>
+</section>
+<section id="temperature-and-humidity">
+<h2><span class="section-number">1.3.3. </span>Temperature and humidity<a class="headerlink" href="#temperature-and-humidity" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Next we look at the ‘Temperature and Humidity’ tab. The Yearly Chart shows the temperature distribution throughout the year. You can click on the little book icon beside the chart to go to an explanation page. The grey band is the ASHRAE adaptive comfort band. If the temperatures fall within it, it means that 80%-90% of the occupants will feel comfortable at that temperature.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_8.png"><img alt="../_images/clima1_8.png" class="align-center" src="../_images/clima1_8.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="2">
+<li><p>You can zoom into the data by clicking and dragging on the graph as shown below.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_9.png"><img alt="../_images/clima1_9.png" class="align-center" src="../_images/clima1_9.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="3">
+<li><p>You can zoom out by clicking and dragging the bar below the graph. You can also reset the axes by clicking on the home icon. You can also turn on and off data by clicking on the legend.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_10.png"><img alt="../_images/clima1_10.png" class="align-center" src="../_images/clima1_10.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="4">
+<li><p>Next we look at the Daily Chart. It shows the condition of an average day of each month.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_11.png"><img alt="../_images/clima1_11.png" class="align-center" src="../_images/clima1_11.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="5">
+<li><p>Next we look at the Heatmap Chart. The x-axis is 365 days of the year and the y-axis is 24 hours of a day. The color represents the temperature.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_12.png"><img alt="../_images/clima1_12.png" class="align-center" src="../_images/clima1_12.png" style="width: 100%;" />
+</a>
+</section>
+<section id="sun-wind-natural-ventilation-and-outdoor-comfort">
+<h2><span class="section-number">1.3.4. </span>Sun, wind, natural ventilation and outdoor comfort<a class="headerlink" href="#sun-wind-natural-ventilation-and-outdoor-comfort" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>In the Sun and Clouds tab. You will be able to see the sun path and the daily chart of the horizontal solar irradiation received. These information will be useful if you are thinking of deploying PV panels on your building.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_13.png"><img alt="../_images/clima1_13.png" class="align-center" src="../_images/clima1_13.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="2">
+<li><p>In the Wind tab. We can visualize both the wind speed and wind direction with the wind rose diagram. You can quickly see the predominant wind direction and magnitude of the wind speed.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_14.png"><img alt="../_images/clima1_14.png" class="align-center" src="../_images/clima1_14.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="3">
+<li><p>The Natural Ventilation tab allows the user to set a minimum and maximum air temperature range that is suitable for natural ventilation. Buildings can open windows and does not require HVAC. The above diagram, heat map shows when this condition is satisfied. The below diagram shows for each month what are the percentage of days the condition is satisfied. We can see that in New York, Spring and Autumn has very high natural ventilation potential if the range is between 10-24 degC.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_15.png"><img alt="../_images/clima1_15.png" class="align-center" src="../_images/clima1_15.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="4">
+<li><p>However, 10-24 degC feels like too big a range. Lets go back to Temperature and Humidity tab, and get the ASHRAE adaptive comfort 80% range, use the min and max temperature as the range for natural ventilation potential. The min = 17.4 degC and max = 24.4 degC.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_16.png"><img alt="../_images/clima1_16.png" class="align-center" src="../_images/clima1_16.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="5">
+<li><p>Now lets change the Natural Ventilation min/max to the ASHRAE adaptive comfort 80% band. The tool does not allow decimal place. So lets input 17 degC and 24degC. We can see the potential is reduced and the potential shifted to the summer season.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_17.png"><img alt="../_images/clima1_17.png" class="align-center" src="../_images/clima1_17.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+<ol class="arabic simple" start="6">
+<li><p>Universal Thermal Climate Index (UTCI) is used for assessing Outdoor Thermal Comfort. Click on the Outdoor Thermal Comfort tab, looking at the UTCI thermal stress chart you can see when there is very high thermal stress outdoor. From May to Sep, high thermal stress is experience during day time. These are very useful information for designing outdoor spaces.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/clima1_18.png"><img alt="../_images/clima1_18.png" class="align-center" src="../_images/clima1_18.png" style="width: 100%;" />
+</a>
+<p><br/><br/></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_climate.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Climate Analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01_2_climate_p2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.4. </span>Climate Analysis Part 2: Visualize Climate Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-weather-file">1.3.1. Get weather file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-weather-file-with-cbe-clima-tool">1.3.2. Load weather file with CBE Clima Tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-and-humidity">1.3.3. Temperature and humidity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sun-wind-natural-ventilation-and-outdoor-comfort">1.3.4. Sun, wind, natural ventilation and outdoor comfort</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gautaman Asirwatham, Amber Sun (Extended from original work by Kian Wee Chen)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Gaudi.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+# Evaluating HVAC Systems
+So far we have only simulated the loads of the shoebox model using ideal air loads. In this tutorial, we will configure HVAC systems and apply it to the model. Evaluate the HVAC systems by comparing their energy consumption.
