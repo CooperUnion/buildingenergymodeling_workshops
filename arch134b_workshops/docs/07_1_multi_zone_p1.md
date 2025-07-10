@@ -50,7 +50,7 @@ Connect the Index to the “i” input of the Item component. Slide the Index to
 ```
 <br/><br/>
 
-Check if the rooms/zones are properly defined by clicking on each Item. The output of the Item is a Brep or a geometry which can be connected to other components’ inputs. Wire the Brep of the house to the _geometry input of "Incident Radiation" like in [5.2.6](https://gaudi369.github.io/buildingenergymodeling_workshops/docs/05_2_passive_design_p2.html#set-analysis-period-for-summer-design-day).You can also specify the different room/zones by pulling up panels as shown in the bottom image.
+Check if the rooms/zones are properly defined by clicking on each Item. The output of the Item is a Brep or a geometry which can be connected to other components’ inputs. Wire the Brep of the house to the _geometry input of "Incident Radiation" like in [5.2.6](https://gaudi369.github.io/buildingenergymodeling_workshops/docs/05_2_passive_design_p2.html#set-analysis-period-for-summer-design-day). You can also specify the different room/zones by pulling up panels as shown in the bottom image.
 ```{image} ../_static/multizone/multizone2_7.2.png
 :width: 100%
 :align: center
@@ -58,7 +58,7 @@ Check if the rooms/zones are properly defined by clicking on each Item. The outp
 <br/><br/>
 
 Connect the House Brep (Top Item) back to the HB RoomSolid from earlier. Remember the hold down Shift key when wiring from the same output. It is also a good habit to name the room because complex models will have multiple different rooms for different purposes.
-```{image} ../_static/multizone/multizone2_8.png
+```{image} ../_static/multizone/multizone2_8.2.png
 :width: 100%
 :align: center
 ```
