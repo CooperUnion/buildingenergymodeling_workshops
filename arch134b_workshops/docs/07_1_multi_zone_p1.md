@@ -50,7 +50,7 @@ Connect the Index to the “i” input of the Item component. Slide the Index to
 ```
 <br/><br/>
 
-Check if the rooms/zones are properly defined by clicking on each Item. The output of the Item is a Brep or a geometry which can be connected to other components’ inputs. Wire the Brep of the house to the _geometry input of "Incident Radiation" like in [5.2.6](##5.2.6.-Set-Analysis-Period-for-Summer-Design-Day)
+Check if the rooms/zones are properly defined by clicking on each Item. The output of the Item is a Brep or a geometry which can be connected to other components’ inputs. Wire the Brep of the house to the _geometry input of "Incident Radiation" like in [5.2.6](#5.2.6.-Set-Analysis-Period-for-Summer-Design-Day)
 ```{image} ../_static/multizone/multizone2_7.2.png
 :width: 100%
 :align: center
