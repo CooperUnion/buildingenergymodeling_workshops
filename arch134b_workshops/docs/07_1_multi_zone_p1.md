@@ -50,7 +50,15 @@ Connect the Index to the “i” input of the Item component. Slide the Index to
 ```
 <br/><br/>
 
-Check if the rooms/zones are properly defined by clicking on each Item. The output of the Item is a Brep or a geometry which can be connected to other components’ inputs. Wire the Brep of the house to the _geometry input of "Incident Radiation" like in [5.2.6](05_2_passive_design_p2.html#set-analysis-period-for-summer-design-day). You can also specify the different room/zones by pulling up panels as shown in the bottom image.
+Check if the rooms/zones are properly defined by clicking on each Item. The output of the Item is a Brep or a geometry which can be connected to other components’ inputs. Wire the Brep of the house to the _geometry input of "Incident Radiation" like in [5.2.6](05_2_passive_design_p2.html#set-analysis-period-for-summer-design-day)
+[5.2.6](/buildingenergymodeling_workshops/docs/05_2_passive_design_p2.html#set-analysis-period-for-summer-design-day)
+[5.2.6](https://your-site-url.com/buildingenergymodeling_workshops/docs/05_2_passive_design_p2.html#set-analysis-period-for-summer-design-day)
+[first section](#download-the-visualization-template)
+[section 5](#526-set-analysis-period-for-summer-design-day)
+[section 5](#set-analysis-period-for-summer-design-day)
+[section 5](##set-analysis-period-for-summer-design-day)
+
+You can also specify the different room/zones by pulling up panels as shown in the bottom image.
 ```{image} ../_static/multizone/multizone2_7.2.png
 :width: 100%
 :align: center
