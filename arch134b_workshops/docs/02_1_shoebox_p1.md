@@ -1,4 +1,4 @@
-# Weather Data Visualization with Ladybug Tools
+# Weather Data Visualization with Ladybug (LB) Tools
 
 This tutorial demonstrates how to use the Ladybug plugin in Grasshopper to create a dashboard of climate analysis graphics from an EPW weather file. This process is fundamental for understanding the local climate and informing early-stage design decisions.
 
@@ -39,7 +39,7 @@ This is an alternative place to drag and drop components from.
 <br/><br/>
 
 ## Import EPW
-Double-click the canvas and type "Import EPW". Select and place the Import EPW component onto the canvas. Click and hold the right side of the panel where the small connection tab is located to create a connection. Drag and release onto the Import EPW component connection tab to connect the components. This is the standard process of connecting components and will be referenced often throughout the modules.
+Double-click the canvas and type "LB Import EPW". Select and place the Import EPW component onto the canvas. Click and hold the right side of the panel where the small connection tab is located to create a connection. Drag and release onto the Import EPW component connection tab to connect the components. This is the standard process of connecting components and will be referenced often throughout the modules.
 
 ```{image} ../_static/shoebox1/shoebox1_5.png
 :width: 100%
