@@ -1,7 +1,7 @@
 # Loads and EUI Simulation
 
 ## Model to OSM component
-Recreate the components and connections as shown below. Leave youreself some space in the canvas for future components. Note the toggle component is left as false and connected to both write and run. Leaving this toggle as false will prevent early simulation runs which take a few seconds to load. 
+Recreate the components (HB Model to OSM, Boolean Toggle) and connections as shown below. Leave yourself some space in the canvas for future components. Note the toggle component is left as false and connected to both write and run. Leaving this toggle as false will prevent early simulation runs which take a few seconds to load. 
 
 ```{image} ../_static/sim1/sim1_1.png
 :width: 100%
@@ -10,7 +10,7 @@ Recreate the components and connections as shown below. Leave youreself some spa
 <br/><br/>
 
 ## Simulation Parameters components
-Continue recreating the components and connections shown in the images step-by-step.
+Continue recreating the components (HB Simulation Output, HB Simulation Parameter) and connections shown in the images step-by-step.
 ```{image} ../_static/sim1/sim1_2.png
 :width: 100%
 :align: center
