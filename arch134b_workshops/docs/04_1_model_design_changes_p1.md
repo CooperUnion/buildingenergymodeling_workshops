@@ -19,7 +19,7 @@ The image shows 8760 plots for heating, cooling, solar gain, and infiltration lo
 <br/><br/>
 
 ## Calculating Peak Heating and Cooling Loads
-Follow along recreating the components and connections shown.
+Follow along recreating the components (HB Read HVAC Sizing) and connections shown.
 
 ```{image} ../_static/hvac1/hvac1_3.png
 :width: 100%
