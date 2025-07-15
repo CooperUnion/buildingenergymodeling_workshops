@@ -38,3 +38,4 @@ parts:
     sections:
     - file: docs/07_1_multi_zone_p1
     - file: docs/07_2_multi_zone_p2
+    - file: docs/07_3_multi_zone_p3
