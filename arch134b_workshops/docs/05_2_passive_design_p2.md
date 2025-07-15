@@ -37,7 +37,7 @@ Find a video demonstration here:
 <br/><br/>
 
 ## Add Window Border Shades
-This models an adjustable border along the perimeter of the windows.
+Use a "LB Cumulative Sky Matrix" component. Connect the outputs of ImportEPW component to the respective inputs of SkyMatrix. This models an adjustable border along the perimeter of the windows. 
 
 ```{image} ../_static/psvdgn1/psvdgn1_6.png
 :width: 100%
@@ -46,6 +46,7 @@ This models an adjustable border along the perimeter of the windows.
 <br/><br/>
 
 ## Create Sky Matrix from Imported EPW Data
+Insert a "LB Analysis Period" component and connect to the _hoys output of SkyMatrix.
 ```{image} ../_static/psvdgn1/psvdgn1_7.png
 :width: 100%
 :align: center
