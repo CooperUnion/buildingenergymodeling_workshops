@@ -58,7 +58,7 @@ Create a "Rooms Solid" component similarly to how you searched an placed the "Ge
 <br/><br/>
 
 ## Set Windows and link to Aperture
-Link your windows layer to a new geometry component and connect it to an "Aperture" component. Feel free to turn off the Zone layer for easier access.
+Select the objects in your Window layer and "Set Multiple Geometries" in a new geometry component. Connect it to an "Aperture" component. 
 
 ```{image} ../_static/shoebox2/shoebox2_7.png
 :width: 100%
