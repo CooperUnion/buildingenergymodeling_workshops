@@ -46,6 +46,7 @@ Use a "LB Cumulative Sky Matrix" component. Connect the outputs of ImportEPW com
 <br/><br/>
 
 ## Create Sky Matrix from Imported EPW Data
+Insert a "LB Analysis Period" component and connect to the _hoys output of SkyMatrix.
 ```{image} ../_static/psvdgn1/psvdgn1_7.png
 :width: 100%
 :align: center
