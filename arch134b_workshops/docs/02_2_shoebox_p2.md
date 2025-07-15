@@ -58,7 +58,7 @@ Create a "Rooms Solid" component similarly to how you searched an placed the "Ge
 <br/><br/>
 
 ## Set Windows and link to Aperture
-Link your windows layer to a new geomoetry component and connect it to an "Aperture" component.
+Link your windows layer to a new geometry component and connect it to an "Aperture" component. Feel free to turn off the Zone layer for easier access.
 
 ```{image} ../_static/shoebox2/shoebox2_7.png
 :width: 100%
