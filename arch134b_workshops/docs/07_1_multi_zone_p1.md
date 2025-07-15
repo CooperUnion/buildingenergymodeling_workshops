@@ -1,4 +1,4 @@
-# Multi-Zone-Part 1: 
+# Multi-Zone-Part 1: House Zone
 
 ## Setting House Zone
 1. Bring up a Brep component. Right click on the Brep component to reveal a dropdown and select "Set Multiple Breps."
