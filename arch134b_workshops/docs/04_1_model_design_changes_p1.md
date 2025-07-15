@@ -1,7 +1,7 @@
 # 8760 Models and Peak Loads
 
 ## Creating more 8760 visualizations
-Recreate this block on your canvas. Explore connecting several RoomEnergyResult outputs to the Hourly Plot _data input. Observe the generated plots. 
+Recreate this block on your canvas. Explore connecting several RoomEnergyResult outputs to the _data input of Hourly Plot. Observe the generated plots. Use a LB Deconstruct Data (XData) component to see the header of the plots.
 
 ```{image} ../_static/hvac1/hvac1_1.png
 :width: 100%
