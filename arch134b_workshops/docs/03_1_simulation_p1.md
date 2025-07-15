@@ -110,7 +110,7 @@ Here is another reference image including the HB panel where you can drag and dr
 <br/><br/>
 
 ## Connect Sets to Room Definition
-We can copy and paste the program and construction set values into a panel for accesibility. Then we can connect these panels to our main workflows. This leaves, the drop down menus free to explore without triggering a new simulation accidentally.
+We can copy and paste the program and construction set values into a panel for accessibility. Then we can connect these panels to our main workflows. This leaves, the drop down menus free to explore without triggering a new simulation accidentally.
 
 ```{image} ../_static/sim1/sim1_13.png
 :width: 100%
