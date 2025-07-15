@@ -49,7 +49,7 @@ If your geometry is set properly, clicking your geometry component will highligh
 <br/><br/>
 
 ## Create "Rooms Solid" Component
-Create a "Rooms Solid" component similarly to how you searched an placed the "Geometry" component earlier. Connect your Geometry to the _geo input.
+Create a "HB Room From Solid" component similarly to how you searched an placed the "Geometry" component earlier. Connect your Geometry to the _geo input.
 
 ```{image} ../_static/shoebox2/shoebox2_6.png
 :width: 100%
@@ -58,7 +58,7 @@ Create a "Rooms Solid" component similarly to how you searched an placed the "Ge
 <br/><br/>
 
 ## Set Windows and link to Aperture
-Select the objects in your Window layer and "Set Multiple Geometries" in a new geometry component. Connect it to an "Aperture" component. 
+Select the objects in your Window layer and 'Set Multiple Geometries' in a new geometry component. Connect it to an "Aperture" component. 
 
 ```{image} ../_static/shoebox2/shoebox2_7.png
 :width: 100%
@@ -67,7 +67,7 @@ Select the objects in your Window layer and "Set Multiple Geometries" in a new g
 <br/><br/>
 
 ## Add Subface
-Create the 'AddSubface' component. Connect rooms -> hb_obj and apertures -> '_sub_faces' as shown.
+Create the "HB Add Subface" component. Connect rooms -> hb_obj and apertures -> '_sub_faces' as shown.
 
 ```{image} ../_static/shoebox2/shoebox2_8.png
 :width: 100%
@@ -76,7 +76,7 @@ Create the 'AddSubface' component. Connect rooms -> hb_obj and apertures -> '_su
 <br/><br/>
 
 ## Create Model
-Create the Model component, then connect hb_obj -> rooms_ as shown.
+Create the "HB Model" component, then connect hb_obj -> rooms_ as shown.
 
 ```{image} ../_static/shoebox2/shoebox2_9.png
 :width: 100%
