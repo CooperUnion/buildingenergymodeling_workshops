@@ -10,7 +10,7 @@ Recreate the components (HB Model to OSM, Boolean Toggle, Panel) and connections
 <br/><br/>
 
 ## Simulation Parameters components
-Continue recreating the components (HB Simulation Output, HB Simulation Parameter) and connections shown in the images step-by-step.
+Continue recreating the components (HB Simulation Output, HB Simulation Parameter, Boolean Toggle) and connections shown in the images step-by-step.
 ```{image} ../_static/sim1/sim1_2.png
 :width: 100%
 :align: center
@@ -27,8 +27,7 @@ Note the several outputs of the "HB Model to OSM" component. We will use the sql
 <br/><br/>
 
 ## Monthly Load Balance Visualization
-Connect the model output of "HB Model" to _rooms_model input of "HB Thermal Load Balance." 
-Create a "LB Time Interval Operation" component such that it takes in the load balance and performs a (daily/_monthly_/mon_per_hr) time interval operation on the data collection. Input that into the "LB Monthly Chart" to visualize the monthly load balance. 
+Connect the model output of "HB Model" to _rooms_model input of "HB Thermal Load Balance." Create a "LB Time Interval Operation" component such that it takes in the load balance and performs a monthly time interval operation on the data collection. Input that into the "LB Monthly Chart" to visualize the monthly load balance. 
 
 ```{image} ../_static/sim1/sim1_4.png
 :width: 100%
@@ -111,7 +110,7 @@ Here is another reference image including the HB panel where you can drag and dr
 <br/><br/>
 
 ## Connect Sets to Room Definition
-We can copy and paste the program and construction set values into a panel for accesibility. Then we can connect these panels to our main workflows. This leaves, the drop down menus free to explore without triggering a new simulation accidentally.
+We can copy and paste the program and construction set values into a panel for accessibility. Then we can connect these panels to our main workflows. This leaves, the drop down menus free to explore without triggering a new simulation accidentally.
 
 ```{image} ../_static/sim1/sim1_13.png
 :width: 100%
