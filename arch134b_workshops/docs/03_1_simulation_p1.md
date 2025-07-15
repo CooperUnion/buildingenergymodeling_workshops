@@ -18,7 +18,7 @@ Continue recreating the components and connections shown in the images step-by-s
 <br/><br/>
 
 ## Room Energy Result
-Note the several outputs of the "Model to OSM" component. We will use the sql output the most in future modules. Think of this as the main simulation data. There is a ton of data contained here. We will route this vast data to other components to preform operations on and visualize specific parts of the data.
+Note the several outputs of the "HB Model to OSM" component. We will use the sql output the most in future modules. Think of this as the main simulation data. There is a ton of data contained here. We will route this vast data to other components to preform operations on and visualize specific parts of the data.
 
 ```{image} ../_static/sim1/sim1_3.png
 :width: 100%
@@ -27,6 +27,7 @@ Note the several outputs of the "Model to OSM" component. We will use the sql ou
 <br/><br/>
 
 ## Monthly Load Balance Visualization
+Connect the model output of "HB Model" to _rooms_model input of "HB Thermal Load Balance" (LoadBalance). 
 ```{image} ../_static/sim1/sim1_4.png
 :width: 100%
 :align: center
