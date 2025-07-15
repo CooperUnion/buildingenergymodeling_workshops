@@ -55,7 +55,7 @@ Insert a "LB Analysis Period" component and connect to the _hoys output of SkyMa
 <br/><br/>
 
 ## Set Analysis Period for Summer Design Day
-June 21st is chosen as our model summer design day.
+June 21st is chosen as our model summer design day. Create a "LB Incident Radiation" and set the reference values for grid size and offset distance before running the component.
 
 ```{image} ../_static/psvdgn1/psvdgn1_8.png
 :width: 100%
