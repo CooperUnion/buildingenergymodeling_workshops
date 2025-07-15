@@ -28,6 +28,7 @@ Follow along recreating the components (HB Read HVAC Sizing) and connections sho
 <br/><br/>
 
 ## Visualizing Peak Heating and Cooling Loads
+Use a HB Read Zone Sizing (ReadZSZ) component.
 ```{image} ../_static/hvac1/hvac1_4.png
 :width: 100%
 :align: center
