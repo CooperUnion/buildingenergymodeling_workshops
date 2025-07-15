@@ -37,6 +37,7 @@ Create a "LB Time Interval Operation" component such that it takes in the load b
 <br/><br/>
 
 ## Legend Parameters
+Insert a Legend Parameter component whose input colors are dictated by "LB Color Range" which creates gradient visualizations.
 ```{image} ../_static/sim1/sim1_5.png
 :width: 100%
 :align: center
