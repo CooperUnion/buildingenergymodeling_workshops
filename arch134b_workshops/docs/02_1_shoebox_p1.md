@@ -81,7 +81,7 @@ The plot on top (the hourly plot) is called an 8760 model. Each pixel represents
 Hover over the center of the other two plot components on your Grasshopper canvas to read about them. 
 
 ## Create Wind Rose and Sun Path visualizations
-The _location input takes values from the _location output of your Inport EPW component. The _wind_direction input takes values from the _wind_direction component. The _data component takes values from the **take better picture for this**.
+The _location input takes values from the _location output of your Import EPW component. The _wind_direction input takes values from the _wind_direction component of the Import EPW component. The _data component takes values from the **take better picture for this**.
 
 ```{image} ../_static/shoebox1/shoebox1_9.png
 :width: 100%

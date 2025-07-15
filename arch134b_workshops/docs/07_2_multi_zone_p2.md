@@ -34,3 +34,10 @@
 :align: center
 ```
 <br/><br/>
+
+6. Check whether the zones are properly assigned by bringing up a HB Label Rooms which automatically labels the zones in the Rhino viewport. For the Aperture and Shade components, add the new respective window and roof geometries from the garage model. You may need to select all of the geometries again, including from the house model. 
+```{image} ../_static/multizone/multizone3_6.1.png
+:width: 100%
+:align: center
+```
+<br/><br/>
