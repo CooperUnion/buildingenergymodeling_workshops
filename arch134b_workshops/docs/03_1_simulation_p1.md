@@ -1,7 +1,7 @@
 # Loads and EUI Simulation
 
 ## Model to OSM component
-Recreate the components (HB Model to OSM, Boolean Toggle) and connections as shown below. Leave yourself some space in the canvas for future components. Note the toggle component is left as false and connected to both write and run. Leaving this toggle as false will prevent early simulation runs which take a few seconds to load. 
+Recreate the components (HB Model to OSM, Boolean Toggle, Panel) and connections as shown below. Leave yourself some space in the canvas for future components. Note the toggle component is left as false and connected to both write and run. Leaving this toggle as false will prevent early simulation runs which take a few seconds to load. 
 
 ```{image} ../_static/sim1/sim1_1.png
 :width: 100%
@@ -18,7 +18,7 @@ Continue recreating the components (HB Simulation Output, HB Simulation Paramete
 <br/><br/>
 
 ## Room Energy Result
-Note the several outputs of the "HB Model to OSM" component. We will use the sql output the most in future modules. Think of this as the main simulation data. There is a ton of data contained here. We will route this vast data to other components to preform operations on and visualize specific parts of the data.
+Note the several outputs of the "HB Model to OSM" component. We will use the sql output the most in future modules. Think of this as the main simulation data. There is a ton of data contained here. We will route this vast data to other components (HB Read Face Result, HB Read Room Energy Result) to preform operations on and visualize specific parts of the data.
 
 ```{image} ../_static/sim1/sim1_3.png
 :width: 100%
@@ -27,7 +27,9 @@ Note the several outputs of the "HB Model to OSM" component. We will use the sql
 <br/><br/>
 
 ## Monthly Load Balance Visualization
-Connect the model output of "HB Model" to _rooms_model input of "HB Thermal Load Balance" (LoadBalance). 
+Connect the model output of "HB Model" to _rooms_model input of "HB Thermal Load Balance." 
+Create a "LB Time Interval Operation" component such that it takes in the load balance and performs a (daily/_monthly_/mon_per_hr) time interval operation on the data collection. Input that into the "LB Monthly Chart" to visualize the monthly load balance. 
+
 ```{image} ../_static/sim1/sim1_4.png
 :width: 100%
 :align: center
@@ -35,6 +37,7 @@ Connect the model output of "HB Model" to _rooms_model input of "HB Thermal Load
 <br/><br/>
 
 ## Legend Parameters
+Insert a Legend Parameter component whose input colors are dictated by "LB Color Range" which creates gradient visualizations.
 ```{image} ../_static/sim1/sim1_5.png
 :width: 100%
 :align: center

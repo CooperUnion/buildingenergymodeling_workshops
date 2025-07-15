@@ -58,7 +58,7 @@ Create a "HB Room From Solid" component similarly to how you searched an placed 
 <br/><br/>
 
 ## Set Windows and link to Aperture
-Select the objects in your Window layer and 'Set Multiple Geometries' in a new geometry component. Connect it to an "Aperture" component. 
+Select the objects in your Window layer and 'Set Multiple Geometries' in a new geometry component. Connect it to an "HB Aperture" component. 
 
 ```{image} ../_static/shoebox2/shoebox2_7.png
 :width: 100%
@@ -85,7 +85,7 @@ Create the "HB Model" component, then connect hb_obj -> rooms_ as shown.
 <br/><br/>
 
 ## Visualize Room Attributes
-Continue to recreate the block diagram step-by-step by searching for components, placing, and connecting them.
+Continue to recreate the block diagram step-by-step by searching for components (HB Room Energy Attributes, HB Room Attributes, HB Color Room Attributes), placing, and connecting them.
 
 ```{image} ../_static/shoebox2/shoebox2_10.png
 :width: 100%
@@ -93,7 +93,7 @@ Continue to recreate the block diagram step-by-step by searching for components,
 ```
 <br/><br/>
 
-## Specify Legend Parameters
+## Specify HB Legend Parameters (LegendPar) component
 The yellow box is a "Panel" component. This component can be double clicked and typed into. Alternatively, double click the canvas then type "6 and press enter. This should create the same panel as shown in the image. 
 
 ```{image} ../_static/shoebox2/shoebox2_11.png
@@ -114,7 +114,7 @@ The ColorRoomAttributes component we created should color the floor of your shoe
 <br/><br/>
 
 ## Check Face Attributes
-Hide the Room Attribute visualization by right clicking the component and selecting "Hide Preview". The Face Attribute visual shows useful characteristics such as the material type. It can also visualize thermal resistance (called R-values) and thermal conductance (called U values or G values). Read more here: https://en.wikipedia.org/wiki/Thermal_conductance_and_resistance
+Hide the Room Attribute visualization by right clicking the component and selecting "Hide Preview". The "HB Color Face Attributes" component visually shows useful characteristics such as the material type. It can also visualize thermal resistance (called R-values) and thermal conductance (called U values or G values). Read more here: https://en.wikipedia.org/wiki/Thermal_conductance_and_resistance
 
 ```{image} ../_static/shoebox2/shoebox2_13.png
 :width: 100%
