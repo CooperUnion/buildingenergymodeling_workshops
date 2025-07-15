@@ -46,7 +46,8 @@ Use a "LB Cumulative Sky Matrix" component. Connect the outputs of ImportEPW com
 <br/><br/>
 
 ## Create Sky Matrix from Imported EPW Data
-Insert a "LB Analysis Period" component and connect to the _hoys output of SkyMatrix.
+Insert a "LB Analysis Period" component and connect to the _hoys output of SkyMatrix. Create two integer-type Number Sliders, one ranging from 1 to 12 and the other from 1 to 31. Connect the former to _start month and _end month inputs to represent the 12 months of the year. Wire the latter to _start day and _end day for the 30 days of the month.
+
 ```{image} ../_static/psvdgn1/psvdgn1_7.png
 :width: 100%
 :align: center
@@ -54,7 +55,7 @@ Insert a "LB Analysis Period" component and connect to the _hoys output of SkyMa
 <br/><br/>
 
 ## Set Analysis Period for Summer Design Day
-June 21st is chosen as our model summer design day.
+June 21st is chosen as our model summer design day. Create a "LB Incident Radiation" and set the reference values for grid size and offset distance before running the component.
 
 ```{image} ../_static/psvdgn1/psvdgn1_8.png
 :width: 100%
