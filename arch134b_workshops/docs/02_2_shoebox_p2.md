@@ -94,7 +94,7 @@ Continue to recreate the block diagram step-by-step by searching for components 
 <br/><br/>
 
 ## Specify HB Legend Parameters (LegendPar) component
-The yellow box is a "Panel" component. This component can be double clicked and typed into. Alternatively, double click the canvas then type "6 and press enter. This should create the same panel as shown in the image. 
+The yellow box is a "Panel" component. This component can be double clicked and typed into.  Alternatively, as a shortcut, double click the canvas, type " then 6 and press enter. This should create the same panel as shown in the image. 
 
 ```{image} ../_static/shoebox2/shoebox2_11.png
 :width: 100%
