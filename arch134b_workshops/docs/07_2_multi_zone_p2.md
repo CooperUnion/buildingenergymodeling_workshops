@@ -1,6 +1,6 @@
 # Multi-Zone Part 2: Garage Zone
 ## Setting Garage Zone
-1. Wire the Item of the Garage to a new RoomSolid. Label it “Garage.” Bring up a HB Apply Load Values in order to assign a program to the garage.
+1. Wire the Item of the Garage to a new HB Room from Solid. Label it “Garage.” Bring up a HB Apply Load Values in order to assign a program to the garage. Set conditioned to True. 
 ```{image} ../_static/multizone/multizone3_1.1.png
 :width: 100%
 :align: center
@@ -28,7 +28,7 @@
 ```
 <br/><br/>
 
-5. Disconnect IdealAir from AddSubface and add the components boxed in red. HB Solve Adjacencies (SolveAdj) is used since we have a series of HB Rooms that are adjacent and/or share matching faces. Set Adiabatic to False. In this model, assume that there will be no heat transfer between the house and garage.
+5. Disconnect IdealAir from AddSubface and add the components boxed in red. HB Solve Adjacencies (SolveAdj) is used since we have a series of HB Rooms that are adjacent and/or share matching faces. In this model, we will assume there is limited to no heat transfer between the house and the garage. This is due to the fact that most garages are typically constructed well with proper insulation such that it significantly slows heat exchange. With this in mind, set Adiabatic to True. An adiabatic process, in thermodynamics, is when no heat is transferred in or out of a system such that Q = 0.
 ```{image} ../_static/multizone/multizone3_5.1.png
 :width: 100%
 :align: center
