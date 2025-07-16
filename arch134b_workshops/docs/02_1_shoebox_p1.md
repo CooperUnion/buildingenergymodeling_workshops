@@ -59,7 +59,7 @@ Practice double-clicking the canvas, searching for components, selecting and pla
 <br/><br/>
 
 ## Hide lines in the hourly plot
-Right click the center of the Hourly Plot component and click the option to hide "Preview." Then connect the indicated outputs to a "Custom Preview" component. Note how this removes the grid lines from the original plot. Custom Previews can be used to modify your plots.
+Right click the center of the LB Hourly Plot component and click the option to hide "Preview." Then connect the indicated outputs to a "Custom Preview" component. Note how this removes the grid lines from the original plot. Custom Previews can be used to modify your plots.
 
 ```{image} ../_static/shoebox1/shoebox1_7.png
 :width: 100%
@@ -81,7 +81,7 @@ The plot on top (the hourly plot) is called an 8760 model. Each pixel represents
 Hover over the center of the other two plot components on your Grasshopper canvas to read about them. 
 
 ## Create Wind Rose and Sun Path visualizations
-The _location input of _LB SunPath_ takes values from the _location output of your ImportEPW component. The _wind_direction input of _LB Wind Rose_ takes values from the _wind_direction component of the ImportEPW component. The _data component takes values from the **take better picture for this**.
+The _location input of LB SunPath component takes values from the _location output of your ImportEPW component. The _wind_direction input of LB Wind Rose takes values from the _wind_direction output of the ImportEPW component. The _data component takes values from the **take better picture for this**.
 
 ```{image} ../_static/shoebox1/shoebox1_9.png
 :width: 100%
