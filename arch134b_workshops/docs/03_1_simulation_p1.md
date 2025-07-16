@@ -103,7 +103,7 @@ Explore the drop down menus to find an appropriate construction set. For our cas
 
 Here is another reference image including the HB Panel where you can drag and drop many of these components from.
 
-```{image} ../_static/sim1/sim1_12.png
+```{image} ../_static/sim1/sim1_11a.png
 :width: 100%
 :align: center
 ```
