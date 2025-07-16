@@ -101,7 +101,7 @@ Explore the drop down menus to find an appropriate construction set. For our cas
 ```
 <br/><br/>
 
-Here is another reference image including the HB panel where you can drag and drop many of these components from.
+Here is another reference image including the HB Panel where you can drag and drop many of these components from.
 
 ```{image} ../_static/sim1/sim1_12.png
 :width: 100%
