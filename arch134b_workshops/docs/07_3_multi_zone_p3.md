@@ -1,5 +1,5 @@
 # Multi-Zone Part 3: Energy Simulation and Visualization of Results
-## Generate Peak Load Monthly Charts for Multiple-Zones 
+## Generate Peak Heating and Cooling Plots for Multiple-Zones 
 1. Reference this section of the Grasshopper.
 ```{image} ../_static/multizone/multizone4_1.1.png
 :width: 100%
@@ -7,7 +7,7 @@
 ```
 <br/><br/>
 
-2. Add a List Item and Slider to choose to view between generating a house monthly chart or a garage monthly chart. Connect the hb_objs from Border Shades to the L input of the List Item component.
+2. Add a List Item and Slider to choose to view between generating a house peak plot or a garage peak plot. Connect the hb_objs from Border Shades to the L input of the List Item component.
 ```{image} ../_static/multizone/multizone4_2.png
 :width: 100%
 :align: center
@@ -29,7 +29,7 @@
 ```
 <br/><br/>
 
-## Generate 8760 Plot for Multi-Zones
+## Generate 8760 Plot and Monthly Loads Plot for Multi-Zones
 5. Use this area.
 ```{image} ../_static/multizone/multizone4_5.1.png
 :width: 100%
@@ -72,8 +72,6 @@
 :align: center
 ```
 <br/><br/>
-
-**Try: Visualize the Zone Loads for Heating Energy**
 
 11. Disconnect the cooling output from List Item and HB Color Rooms. Try visualizing heating for the house and garage zones. 
 ```{image} ../_static/multizone/multizone4_12.png
