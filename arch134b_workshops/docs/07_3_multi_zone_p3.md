@@ -14,7 +14,7 @@
 ```
 <br/><br/>
 
-3. These should be the results.
+3. These should be the results. On the left is house, on the right is garage. 
 ```{image} ../_static/multizone/multizone4_3.png
 :width: 100%
 :align: center
