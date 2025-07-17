@@ -29,4 +29,24 @@
 ```
 <br/><br/>
 
-## Generate 8760 Maps
+## Reference this area
+```{image} ../_static/multizone/multizone4_5.1.png
+:width: 100%
+:align: center
+```
+<br/><br/>
+
+## Generate 8760 Maps for Multi-Zones
+5. Recreate these components and connections below. For the Number slider, change to integer-type and set range from 0 to 1, referring to the two zones: house and garage.
+```{image} ../_static/multizone/multizone4_6.png
+:width: 100%
+:align: center
+```
+<br/><br/>
+
+6. Connections to L input of List Item component and _data of HB Color Rooms (ColorRooms) are to the cooling output of HB Read Room Energy Results. The _rooms_model input of HB Color Rooms is connected to model output of HB Model.
+```{image} ../_static/multizone/multizone4_5.png
+:width: 100%
+:align: center
+```
+<br/><br/>
