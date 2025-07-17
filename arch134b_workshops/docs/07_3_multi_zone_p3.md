@@ -73,7 +73,19 @@ Move the slider to switch to the other zone and watch the 8760 plot change. Chec
 ```
 <br/><br/>
 
-8. View the Rhino Model from Top View. Notice how the zones for the house and garage are colored. The HB Color Rooms (ColorRooms) component breaks down the total EUI per Zone/Room. 
+8. Disconnect the cooling output from List Item and HB Color Rooms. Try visualizing heating for the house and garage zones. 
+```{image} ../_static/multizone/multizone4_10.png
+:width: 100%
+:align: center
+```
+
+```{image} ../_static/multizone/multizone4_10.png
+:width: 100%
+:align: center
+```
+<br/><br/>
+
+9. View the Rhino Model from Top View. Notice how the zones for the house and garage are colored. The HB Color Rooms (ColorRooms) component breaks down the total EUI per Zone/Room. 
 ```{image} ../_static/multizone/multizone4_10.png
 :width: 100%
 :align: center
