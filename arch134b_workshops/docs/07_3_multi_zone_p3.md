@@ -1,4 +1,4 @@
-# Multi-Zone Part 3:
+# Multi-Zone Part 3: Energy Simulation and Visualization of Results
 ## Generate Peak Load Monthly Charts for Multiple-Zones 
 1. Reference this section of the Grasshopper.
 ```{image} ../_static/multizone/multizone4_1.1.png
@@ -22,14 +22,14 @@
 <br/><br/>
 
 ## Alternative Method: Evaluating Peak Loads Per Zone
-4. Use HB Read Zone Sizing (ReadZSZ) to evaluate the peak loads per zone. Connect a panel to the zone_names to see how the values appear on the panels connected to zone_peak_cool and zone_peak_heat.
+4. Use HB Read HVAC Sizing (ReadHVAC) to evaluate the peak loads per zone. Connect a panel to the zone_names to see how the values appear on the panels connected to zone_peak_cool and zone_peak_heat.
 ```{image} ../_static/multizone/multizone4_4.png
 :width: 100%
 :align: center
 ```
 <br/><br/>
 
-## Reference this area
+## Use this area
 ```{image} ../_static/multizone/multizone4_5.1.png
 :width: 100%
 :align: center
