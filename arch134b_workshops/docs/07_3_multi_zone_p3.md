@@ -36,7 +36,7 @@
 ```
 <br/><br/>
 
-## Generate 8760 Maps for Multi-Zones
+## Generate 8760 Plot for Multi-Zones
 5. Recreate these components and connections below. For the Number slider, change to integer-type and set range from 0 to 1, referring to the two zones: house and garage.
 ```{image} ../_static/multizone/multizone4_6.png
 :width: 100%
@@ -46,6 +46,29 @@
 
 6. Connections to L input of List Item component and _data of HB Color Rooms (ColorRooms) are to the cooling output of HB Read Room Energy Results. The _rooms_model input of HB Color Rooms is connected to model output of HB Model.
 ```{image} ../_static/multizone/multizone4_5.png
+:width: 100%
+:align: center
+```
+<br/><br/>
+
+## Reference Location of Plots
+```{image} ../_static/multizone/multizone4_7.png
+:width: 100%
+:align: center
+```
+<br/><br/>
+
+## Visualization of Results
+7. Peek the bottom of the 8760 Plot. It provides information about what the contents of the plot are comprised of. Since our data was connected to cooling, the type indicates it contains Zone Ideal Loads Supply Air Total Cooling Energy. The System tells us which zone we are looking at, in this case, the house.
+```{image} ../_static/multizone/multizone4_8.png
+:width: 100%
+:align: center
+```
+<br/><br/>
+
+Move the slider to switch to the other zone and watch the 8760 plot change. Check the details of type and System again.
+
+```{image} ../_static/multizone/multizone4_9.png
 :width: 100%
 :align: center
 ```
