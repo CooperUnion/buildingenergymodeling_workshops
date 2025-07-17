@@ -37,7 +37,7 @@
 <br/><br/>
 
 ## Generate 8760 Plot for Multi-Zones
-5. Recreate these components and connections below. For the Number slider, change to integer-type and set range from 0 to 1, referring to the two zones: house and garage.
+5. Recreate these components (HB Color Rooms) and connections below. For the Number slider, change to integer-type and set range from 0 to 1, referring to the two zones: house and garage.
 ```{image} ../_static/multizone/multizone4_6.png
 :width: 100%
 :align: center
@@ -64,20 +64,23 @@
 :width: 100%
 :align: center
 ```
+<br/><br/>
 
-Move the slider to switch to the other zone and watch the 8760 plot change. Check the details of type and System again.
-
+8. Move the slider to switch to the other zone and watch the 8760 plot change. Check the details of type and System again.
 ```{image} ../_static/multizone/multizone4_9.png
 :width: 100%
 :align: center
 ```
 <br/><br/>
 
-8. Disconnect the cooling output from List Item and HB Color Rooms. Try visualizing heating for the house and garage zones. 
+**Try: Visualize the Zone Loads for Heating Energy**
+
+9. Disconnect the cooling output from List Item and HB Color Rooms. Try visualizing heating for the house and garage zones. 
 ```{image} ../_static/multizone/multizone4_12.png
 :width: 100%
 :align: center
 ```
+<br/><br/>
 
 ```{image} ../_static/multizone/multizone4_11.png
 :width: 100%
@@ -85,7 +88,7 @@ Move the slider to switch to the other zone and watch the 8760 plot change. Chec
 ```
 <br/><br/>
 
-9. View the Rhino Model from Top View. Notice how the zones for the house and garage are colored. The HB Color Rooms (ColorRooms) component breaks down the total EUI per Zone/Room. 
+10. View the Rhino Model from Top View. Notice how the zones for the house and garage are colored. The HB Color Rooms (ColorRooms) component breaks down the total EUI per Zone/Room. 
 ```{image} ../_static/multizone/multizone4_10.png
 :width: 100%
 :align: center
