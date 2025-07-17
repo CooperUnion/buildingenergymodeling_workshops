@@ -74,12 +74,12 @@ Move the slider to switch to the other zone and watch the 8760 plot change. Chec
 <br/><br/>
 
 8. Disconnect the cooling output from List Item and HB Color Rooms. Try visualizing heating for the house and garage zones. 
-```{image} ../_static/multizone/multizone4_10.png
+```{image} ../_static/multizone/multizone4_12.png
 :width: 100%
 :align: center
 ```
 
-```{image} ../_static/multizone/multizone4_10.png
+```{image} ../_static/multizone/multizone4_11.png
 :width: 100%
 :align: center
 ```
