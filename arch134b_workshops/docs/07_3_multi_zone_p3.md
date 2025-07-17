@@ -7,8 +7,15 @@
 ```
 <br/><br/>
 
-2. Add a List Item and Slider to choose to view between generating a house monthly chart or a garage monthly chart. Connect the L input of the List Item to Border Shades hb_objs
+2. Add a List Item and Slider to choose to view between generating a house monthly chart or a garage monthly chart. Connect the hb_objs from Border Shades to the L input of the List Item component.
 ```{image} ../_static/multizone/multizone4_2.png
+:width: 100%
+:align: center
+```
+<br/><br/>
+
+3. These should be the results.
+```{image} ../_static/multizone/multizone4_3.png
 :width: 100%
 :align: center
 ```
