@@ -40,7 +40,11 @@
 In this model, we will assume there is limited to no heat transfer between the house and the garage. This is due to the fact that most garages are typically constructed well with proper insulation such that it significantly slows heat exchange. 
 
 6. With this in mind, set Adiabatic to True. An adiabatic process, in thermodynamics, is when no heat is transferred in or out of a system such that Q = 0.
-
+```{image} ../_static/multizone/multizone3_5.2.png
+:width: 100%
+:align: center
+```
+<br/><br/>
 
 ## Check Multi-Zones
 7. Check whether the zones are properly assigned by bringing up a HB Label Rooms which automatically labels the zones in the Rhino viewport. For the Aperture and Shade components, add the new respective window and roof geometries from the garage model. You may need to select all of the geometries again, including from the house model. 
