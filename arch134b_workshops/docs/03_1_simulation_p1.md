@@ -119,7 +119,7 @@ We can copy and paste the program and construction set values into a panel for a
 <br/><br/>
 
 ## Compare EUI by Source for Different Vintages
-Try recording your simulation EUI with your vintage of choice in a menu. Then change the vintage, ensuring these sets are reflected in the panels attatched  to your main workflow. Compare the EUI side by side. Do your results align with your expectations? 
+Try recording your simulation EUI with your vintage of choice in a menu. Then change the vintage, ensuring these sets are reflected in the panels attatched to your main workflow. Compare the EUI side by side. Do your results align with your expectations? Hover over the HB End Use Intensity (EUI)'s ip input to view what units of measure are available. Without a Boolean Toggle, it defaults to False, which produces results in kWh/m^2. To change to Imperial System Units (IP), set a Boolean Toggle from the ip to True. 
 
 ```{image} ../_static/sim1/sim1_14.png
 :width: 100%
