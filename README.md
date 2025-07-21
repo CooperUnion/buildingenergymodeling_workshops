@@ -1,4 +1,8 @@
 # Building Energy Modeling Workshops (Rhino & Ladybug Tools Edition) 2025
+
+## ACTUAL LINK:
+[energy_modeling_workshops](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/intro.html) (change link in about section ASAP)
+
 tutorials for understanding hvac performance when doing architectural design 
 
 - forked from arch134b_workshops by kian wee on 6/20/2025
