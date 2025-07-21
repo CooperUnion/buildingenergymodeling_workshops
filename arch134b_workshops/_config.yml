@@ -27,7 +27,7 @@ sphinx:
     
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/gaudi369/buildingenergymodeling_workshops  # Online location of your book
+  url: https://github.com/CooperUnion/buildingenergymodeling_workshops  # Online location of your book
   path_to_book: # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
@@ -38,4 +38,4 @@ html:
   use_repository_button: true
   home_page_in_navbar: true
   use_multitoc_numbering: false
-  html_baseurl: "https://gaudi369.github.io/buildingenergymodeling_workshops/"
+  html_baseurl: "https://CooperUnion.github.io/buildingenergymodeling_workshops/"
