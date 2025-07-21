@@ -118,11 +118,14 @@ We can copy and paste the program and construction set values into a panel for a
 ```
 <br/><br/>
 
-## Compare EUI by Source for Different Vintages
-Try recording your simulation EUI with your vintage of choice in a menu. Then change the vintage, ensuring these sets are reflected in the panels attatched to your main workflow. Compare the EUI side by side. Do your results align with your expectations? Hover over the HB End Use Intensity (EUI)'s ip input to view what units of measure are available. Without a Boolean Toggle, it defaults to False, which produces results in kWh/m^2. To change to Imperial System Units (IP), set a Boolean Toggle from the ip to True. 
+## Compare EUI for Different Vintages
+When evaluating building energy efficiencies, the term EUI will appear across many times. EUI, in most cases, stands for Energy Use Intensity, calculated by dividing the total annual energy consumption (kWh) by the total gross floor area (m2). However, this could easily be confused with End-Use Intensity, which breaks down that total annual energy consumption into specific uses (i.e. heating, cooling, lighting, appliances), also in SI units of kWh/m2.
+
+Using "HB End Use Intensity" component, try recording your simulation EUI with your building vintage of choice. When you change the vintage, ensure these construction sets are reflected in the panels attatched to your main workflow. Compare the EUI side by side. Do your results align with your expectations? 
 
 ```{image} ../_static/sim1/sim1_14.png
 :width: 100%
 :align: center
 ```
+Hover over the ip input to view what units of measure are available. Without a Boolean Toggle, it defaults to False which produces results in kWh/m2. To change to Imperial System Units (IP), set Toggle to True in order to get the EUI in terms of kBtu/ft2. 
 <br/><br/>
