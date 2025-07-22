@@ -7,7 +7,6 @@ parts:
 - caption: Tutorials
   numbered: true
   chapters:
-  - file: docs/00_openstudio
   - file: docs/01_climate
     sections:
     - file: docs/01_1_climate_p1
@@ -40,3 +39,4 @@ parts:
     - file: docs/07_1_multi_zone_p1
     - file: docs/07_2_multi_zone_p2
     - file: docs/07_3_multi_zone_p3
+  - file: docs/08_open_studio
