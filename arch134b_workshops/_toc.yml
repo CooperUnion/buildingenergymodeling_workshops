@@ -7,6 +7,7 @@ parts:
 - caption: Tutorials
   numbered: true
   chapters:
+  - file: docs/00_openstudio
   - file: docs/01_climate
     sections:
     - file: docs/01_1_climate_p1
