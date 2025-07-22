@@ -15,5 +15,7 @@ HB Model to OSM
 Panel [3.5.2](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/02_2_shoebox_p2.html#create-a-geometry-component)
 
 ## Conversion Breakdown
-1. Download Rhino and then Pollination as referenced in [module 3](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/02_shoebox.html#shoebox-model). Find your weather file as shown in [2.3.1](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/01_climate.html#where-can-i-find-weather-files).
+1. Download Rhino8 and then Pollination as referenced in [module 2](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/02_shoebox.html). Find your weather file as shown in [1.3.1](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/01_1_climate_p1.html#get-weather-file).
+2. Open your model in the Rhino application. Open Grasshopper like in [2.5.1](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/02_1_shoebox_p1.html#open-grasshopper-from-rhino-by-clicking-the-circled-green-icon).
+
    
