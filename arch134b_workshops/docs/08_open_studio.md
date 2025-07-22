@@ -21,6 +21,7 @@ Geometry ([2.6.2](https://cooperunion.github.io/buildingenergymodeling_workshops
 7. Bring in a "HB Model to OSM" component to convert the model to an OSM file. 
 8. Use a "Panel" to paste the [path](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/02_2_shoebox_p2.html#set-one-geometry) to your downloaded weather file, then connect it to the _epw_file input of ModeltoOSM. This contains data about the climate of where your model is for environmental analysis.
 9. Create a Boolean Toggle and double-click on False to switch to True. Wire it to both the _write and run input of ModeltoOSM.
-   
 
+<br/><br/>
+Credit: Thank you to Danielle Chiu for this Loisaida building Rhino model as well as Loisaida Inc. for permitting their location to be used as educational material. 
    
