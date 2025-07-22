@@ -15,6 +15,7 @@ Geometry ([2.6.2](https://cooperunion.github.io/buildingenergymodeling_workshops
 :align: center
 ```
 <br/><br/>
+
 5. Set your "Geometry" component as demonstrated in [2.7](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/02_2_shoebox_p2.html#set-one-geometry). If you have multiple zones, select _Set Multiple Geometries_ and take care with naming them for work clarity. Connect all your geometries to a "HB Room from Solid" component. 
 6. Wire the output rooms to the input rooms_ of a new component, "HB Model."
 7. Bring in a "HB Model to OSM" component to convert the model to an OSM file. 
