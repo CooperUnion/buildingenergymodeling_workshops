@@ -23,5 +23,8 @@ Geometry ([2.6.2](https://cooperunion.github.io/buildingenergymodeling_workshops
 9. Create a Boolean Toggle and double-click on False to switch to True. Wire it to both the _write and run input of ModeltoOSM.
 
 <br/><br/>
+
+For a detailed OpenStudio workshop, check out Kian Wee Chen's [course Arch134B](https://chenkianwee.github.io/arch134b_workshops/docs/intro.html).
+
 Credit: Thank you to Danielle Chiu for this Loisaida building Rhino model as well as Loisaida Inc. for permitting their location to be used as educational material. 
    
