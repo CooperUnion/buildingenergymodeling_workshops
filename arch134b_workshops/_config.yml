@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Building Energy Modeling Workshops (Rhino & Ladybug Edition)
-author: Gautaman Asirwatham, Amber Sun (Extended from original work by Kian Wee Chen)
+author: Gautaman Asirwatham, Amber Sun (Extended from original work by [Kian Wee Chen](https://chenkianwee.github.io/arch134b_workshops/docs/intro.html))
 copyright: '2025, Gaudi'
 #logo: logo.png
 
