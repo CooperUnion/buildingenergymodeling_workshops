@@ -3,7 +3,7 @@
 
 title: Building Energy Modeling Workshops (Rhino & Ladybug Edition)
 author: Gautaman Asirwatham, Amber Sun (Extended from original work by <a href="https://chenkianwee.github.io/arch134b_workshops/docs/intro.html">Kian Wee Chen</a>)
-copyright: '2025, Gaudi'
+copyright: '2025, Gaudi, Amber, advised by Prof. Melody Baglione and Kian Wee Chen'
 #logo: logo.png
 
 # Force re-execution of notebooks on each build.
