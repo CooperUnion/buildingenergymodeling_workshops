@@ -20,8 +20,9 @@ Geometry ([2.6.2](https://cooperunion.github.io/buildingenergymodeling_workshops
 6. Wire the output rooms to the input rooms_ of a new component, "HB Model."
 7. Bring in a "HB Model to OSM" component to convert the model to an OSM file. 
 8. Use a "Panel" to paste the [path](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/02_2_shoebox_p2.html#set-one-geometry) to your downloaded weather file, then connect it to the _epw_file input of ModeltoOSM. This contains data about the climate of where your model is for environmental analysis.
-9. Create a Boolean Toggle and double-click on False to switch to True. Wire it to both the _write and run input of ModeltoOSM.
-
+9. Create a Boolean Toggle and double-click on False to switch to True. Wire it to both the _write and run input of ModeltoOSM. Connect a Panel to the osm output of ModeltoOSM.
+10. Now run the simulation by toggling it to True. After it runs, the panel will show a file path leading to the OSM file. It may be named in.osm (feel free to use a better naming convention before opening it in OpenStudio).
+    
 <br/><br/>
 
 For a detailed OpenStudio workshop, check out Kian Wee Chen's [course Arch134B](https://chenkianwee.github.io/arch134b_workshops/docs/intro.html).
