@@ -50,7 +50,7 @@ Double-click the canvas and type "LB Import EPW". Select and place the ImportEPW
 Notice the component name is located in the center of the "ImportEPW" component. To the left are inputs and to the right are outputs. Required inputs are denoted by a leading underscore (example: "_epw_file"). Connections determine the "flow" of data and operations. You can right click to inspect components. This can be useful for finding "runtime errors" and figuring out the next steps to solve them.
 
 ## Create Temperature and Psychometric Charts.
-Practice double-clicking the canvas, searching for components, selecting and placing them, and connecting them together to replicate the Grasshopper canvas shown below. Hover over the "_base_pt _" input and read the description to understand it's purpose. The following modules will require you to replicate block diagrams in this way.
+Practice double-clicking the canvas, searching for components (LB Hourly Plot, LB Monthly Chart, LB Psychronetric Chart, LB UTCI Polygon), selecting and placing them, and connecting them together to replicate the Grasshopper canvas shown below. Hover over the "_base_pt _" input and read the description to understand it's purpose. The following modules will require you to replicate block diagrams in this way.
 
 ```{image} ../_static/shoebox1/shoebox1_6.png
 :width: 100%
@@ -81,7 +81,7 @@ The plot on top (the hourly plot) is called an 8760 model. Each pixel represents
 Hover over the center of the other two plot components on your Grasshopper canvas to read about them. 
 
 ## Create Wind Rose and Sun Path visualizations
-The _location input of LB SunPath component takes values from the _location output of your ImportEPW component. The _wind_direction input of LB Wind Rose takes values from the _wind_direction output of the ImportEPW component. The _data component takes values from the **take better picture for this**.
+The _location input of "LB SunPath" component takes values from the _location output of your ImportEPW component. The _wind_direction input of "LB Wind Rose" takes values from the _wind_direction output of the ImportEPW component. The _data component takes values from the **take better picture for this**.
 
 ```{image} ../_static/shoebox1/shoebox1_9.png
 :width: 100%
