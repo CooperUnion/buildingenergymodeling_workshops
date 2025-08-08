@@ -1,11 +1,12 @@
 # Climate Analysis
 
-Before you start doing architecture design it is important to understand the location of the site. One way to do this is to analysis the weather data that is available for the site. In this tutorial we will learn where to find the weather files and which program can help us visualize and analyze the data.
+Before you start doing architecture design, it is important to understand the location of the site. One way to do this is to analyze the weather data that is available for the site. In this tutorial, we will learn where to find the weather files and which program can help us visualize and understand the data.
 
 ## Where can I find weather files?
-Weather data are most commonly stored as .epw files. There are other formats such as .wea for daylight simulation by Daysim. You can get .epw files from these two main websites:
+Weather data is most commonly stored in .epw files. There are other formats such as .wea for daylight simulation by Daysim. You can get .epw files from these two main websites:
 1. <a href="https://climate.onebuilding.org/" target="_blank">climate.onebuilding.org</a>: more recent weather files.
 2. <a href="https://energyplus.net/weather" target="_blank">Energyplus website</a> : hosted by the energyplus software website.
+3. <a href="https://www.ladybug.tools/epwmap/" target="_blank">ladybug epw map</a> : created by Ladybug Tools.
 
 In this tutorial, we will use the weather files from climate.onebuilding.org as they are more up to date.
 
