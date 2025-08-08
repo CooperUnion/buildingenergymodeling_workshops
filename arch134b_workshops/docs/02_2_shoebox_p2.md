@@ -14,7 +14,7 @@ Hide the three layers as shown below. Your home should now appear as a simplifie
 <br/><br/>
 
 ## Create a "Geometry" component 
-Double-click the canvas, type in "geometry", click to select the component, and click again on the canvas to place the component. 
+Double-click the canvas, type in "Geometry", click to select the component, and click again on the canvas to place the component. 
 
 ```{image} ../_static/shoebox2/shoebox2_2.png
 :width: 100%
