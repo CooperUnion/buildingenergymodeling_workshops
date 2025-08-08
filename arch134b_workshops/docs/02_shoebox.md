@@ -4,7 +4,7 @@ A shoebox model is a simplified, usually rectangular building used for pre-desig
 In this tutorial, we will generate climate and construction visualizations for a "shoebox" single-family home using Ladybug Tools. 
 
 ## Rhino for 3d modeling
-Install Rhino8 with Grasshopper: <a href="https://www.rhino3d.com/download/" target="_blank">here</a>
+Install Rhino 8 with Grasshopper: <a href="https://www.rhino3d.com/download/" target="_blank">here</a>
 
 ## Shoebox 3D model
 Download the single family home Rhino model from Github: <a href="https://github.com/gaudi369/buildingenergymodeling_workshops/blob/main/arch134b_workshops/_downloads/single_family.3dm" target="_blank">here</a>
