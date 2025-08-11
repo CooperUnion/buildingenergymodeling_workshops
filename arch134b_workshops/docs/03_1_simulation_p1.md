@@ -64,7 +64,7 @@ The "TimeOp" component takes both heating and cooling data from EnergyResult as 
 <br/><br/>
 
 ## Dry Bulb Temp Visualization
-Create a new monthly chart with an appropriate base_pt _. Connect the dry_bulb_temperature output of your ImportEPW component to the _data input of your new monthly chart. This creates a monthly chart that shows the temperature readings using a standard thermometer that is not affected by the moisture in the air, aka a dry bulb. Knowing dry bulb temperature is important in building design when considering thermal comfort, implementing HVAC, and asssessing heat stress. Another view of this configuration is shown in the next image.
+Create a new monthly chart with an appropriate base_pt _. Connect the dry_bulb_temperature output of your ImportEPW component to the _data input of your new monthly chart. This creates a monthly chart that shows the temperature readings using a standard thermometer that is not affected by the moisture in the air, aka a dry bulb. Knowing dry bulb temperature is important in building design when considering [thermal comfort](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/01_1_climate_p1.html#temperature-and-humidity), implementing HVAC, and asssessing heat stress. Another view of this configuration is shown in the next image.
 
 ```{image} ../_static/sim1/sim1_8.png
 :width: 100%
