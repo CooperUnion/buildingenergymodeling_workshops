@@ -36,7 +36,7 @@ Connect the model output of "HB Model" to _rooms_model input of "HB Thermal Load
 <br/><br/>
 
 ## Legend Parameters
-Insert a Legend Parameter component whose input colors are dictated by "LB Color Range" which creates gradient visualizations.
+Insert a "LB Legend Parameter" component whose input colors are dictated by "LB Color Range" which creates gradient visualizations.
 ```{image} ../_static/sim1/sim1_5.png
 :width: 100%
 :align: center
@@ -64,7 +64,7 @@ The "TimeOp" component takes both heating and cooling data from EnergyResult as 
 <br/><br/>
 
 ## Dry Bulb Temp Visualization
-Create a new monthly chart with an appropriate base_pt _. Connect the dry_bulb_temperature output of your ImportEPW component to the _data input of your new monthly chart. Another view of this configuration is shown in the next image.
+Create a new monthly chart with an appropriate base_pt _. Connect the dry_bulb_temperature output of your ImportEPW component to the _data input of your new monthly chart. This creates a monthly chart that shows the temperature readings using a standard thermometer that is not affected by the moisture in the air, aka a dry bulb. Knowing dry bulb temperature is important in building design when considering thermal comfort, implementing HVAC, and asssessing heat stress. Another view of this configuration is shown in the next image.
 
 ```{image} ../_static/sim1/sim1_8.png
 :width: 100%
