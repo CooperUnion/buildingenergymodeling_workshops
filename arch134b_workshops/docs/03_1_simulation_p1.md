@@ -82,7 +82,7 @@ This is what your plot generation logic should look like.
 <br/><br/>
 
 ## Monthly Heating and Cooling Loads Plot with Temperature
-This is what your second and third generated plots should look like. The top shows average daily temperatures by month. The bottom shows heating and cooling loads for each month. We have higher heating loads in the winter and higher cooling loads in the summer. 
+This is what your second and third generated plots should look like. The [top](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/03_1_simulation_p1.html#dry-bulb-temp-visualization) shows average daily temperatures by month. The [bottom](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/03_1_simulation_p1.html#heating-and-cooling-loads-visualization) shows heating and cooling loads for each month. We have higher heating loads in the winter and higher cooling loads in the summer. 
 
 Consider the results. Does this align with what you would expect?
 
