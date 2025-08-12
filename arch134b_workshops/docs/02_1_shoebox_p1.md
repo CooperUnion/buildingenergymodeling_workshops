@@ -81,7 +81,7 @@ The plot on top (the hourly plot) is called an 8760 model. Each pixel represents
 Hover over the center of the other two plot components on your Grasshopper canvas to read about them. 
 
 ## Create Wind Rose and Sun Path visualizations
-The _location input of "LB SunPath" component takes values from the _location output of your ImportEPW component. The _wind_direction input of "LB Wind Rose" takes values from the _wind_direction output of the ImportEPW component. The _data component takes values from the **take better picture for this**.
+The _location input of "LB SunPath" component takes values from the _location output of your ImportEPW component. The _wind_direction input of "LB Wind Rose" takes values from the _wind_direction output of the ImportEPW component. The _data component takes values from the _wind_speed_ output of ImportEPW. **take better picture for this**
 
 ```{image} ../_static/shoebox1/shoebox1_9.png
 :width: 100%
@@ -99,7 +99,7 @@ Investigate the wind rose in relation to your home. Manipulating a "Perspective"
 <br/><br/>
 
 ## Check Sun Path (perspective view)
-Investigate the sun path in relation to your home. Manipulating a "Perspective" Rhino viewport may be useful here to explore the model. A sun path diagram shows the sun's path through the sky at a specific loacation. This plot will be revisited in a later module.
+Investigate the sun path in relation to your home. Manipulating a "Perspective" Rhino viewport may be useful here to explore the model. A sun path diagram shows the sun's path through the sky at a specific location. This plot will be revisited in a later module.
 
 ```{image} ../_static/shoebox1/shoebox1_11.png
 :width: 100%

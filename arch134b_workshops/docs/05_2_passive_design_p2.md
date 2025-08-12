@@ -90,6 +90,7 @@ This shows how much sunlight hits each part of the model's surface. Use a perspe
 <br/><br/>
 
 ## Create Radiation Dome Visualization
+Using LB Radiation Dome, create a visualization of the solar energy or radiation received by the area from all directions.
 ```{image} ../_static/psvdgn1/psvdgn1_12.png
 :width: 100%
 :align: center

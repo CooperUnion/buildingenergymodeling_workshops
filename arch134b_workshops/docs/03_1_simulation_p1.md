@@ -36,7 +36,7 @@ Connect the model output of "HB Model" to _rooms_model input of "HB Thermal Load
 <br/><br/>
 
 ## Legend Parameters
-Insert a Legend Parameter component whose input colors are dictated by "LB Color Range" which creates gradient visualizations.
+Insert a "LB Legend Parameter" component whose input colors are dictated by "LB Color Range" which creates gradient visualizations.
 ```{image} ../_static/sim1/sim1_5.png
 :width: 100%
 :align: center
@@ -64,7 +64,7 @@ The "TimeOp" component takes both heating and cooling data from EnergyResult as 
 <br/><br/>
 
 ## Dry Bulb Temp Visualization
-Create a new monthly chart with an appropriate base_pt _. Connect the dry_bulb_temperature output of your ImportEPW component to the _data input of your new monthly chart. Another view of this configuration is shown in the next image.
+Create a new monthly chart with an appropriate base_pt _. Connect the dry_bulb_temperature output of your ImportEPW component to the _data input of your new monthly chart. This creates a monthly chart that shows the temperature readings using a standard thermometer that is not affected by the moisture in the air, aka a dry bulb. Knowing dry bulb temperature is important in building design when considering [thermal comfort](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/01_1_climate_p1.html#temperature-and-humidity), implementing HVAC systems, and assessing heat stress. Another view of this configuration is shown in the next image.
 
 ```{image} ../_static/sim1/sim1_8.png
 :width: 100%
@@ -82,7 +82,7 @@ This is what your plot generation logic should look like.
 <br/><br/>
 
 ## Monthly Heating and Cooling Loads Plot with Temperature
-This is what your second and third generated plots should look like. The top shows average daily temperatures by month. The bottom shows heating and cooling loads for each month. We have higher heating loads in the winter and higher cooling loads in the summer. 
+This is what your second and third generated plots should look like. The [top](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/03_1_simulation_p1.html#dry-bulb-temp-visualization) shows average daily temperatures by month. The [bottom](https://cooperunion.github.io/buildingenergymodeling_workshops/docs/03_1_simulation_p1.html#heating-and-cooling-loads-visualization) shows heating and cooling loads for each month. We have higher heating loads in the winter and higher cooling loads in the summer. 
 
 Consider the results. Does this align with what you would expect?
 
