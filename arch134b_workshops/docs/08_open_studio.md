@@ -27,5 +27,5 @@ Geometry ([2.6.2](https://cooperunion.github.io/buildingenergymodeling_workshops
 
 For a detailed OpenStudio workshop, check out Kian Wee Chen's [course Arch134B](https://chenkianwee.github.io/arch134b_workshops/docs/intro.html).
 
-Credit: Thank you to Danielle Chiu for this Loisaida building Rhino model as well as Loisaida Inc. for permitting their location to be used as educational material. 
+Credit: Thank you to Arthur Lee AR'25 for the Loisaida building Rhino model as well as Loisaida Inc. for permitting their location to be used as educational material. 
    
