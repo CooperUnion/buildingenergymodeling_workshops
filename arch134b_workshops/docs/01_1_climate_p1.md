@@ -99,7 +99,8 @@
 ```
 <br/><br/>
 
-2. In the Wind tab, we can visualize both the wind speed and wind direction with the wind rose diagram. You can quickly see the predominant wind direction and magnitude of the wind speed.
+2. In the Wind tab, the wind rose diagram helps visualize wind speed, direction and frequency. By interpreting this, you can identify predominant wind patterns that strongly influence building performance and thermal comfort. Wind data informs window placement and ventilation design. Using natural airflow lowers reliance on mechanical cooling systems, which in turn decreases cooling loads and saves energy. Wind also creates pressure differentials across the building surface, causing infiltration (unwanted outdoor air entering) and exfiltration (conditioned air escaping) that make a building less energy efficient. These both increase heating and cooling loads. Because of this, wind has a direct impact on loads. Buildings in windy climates need careful design-tight envelopes, air barriers, and strategic window placement-to control these effects while still allowing for natural ventilation. In design, it mostly comes down to a balance of energy efficiency with comfort.
+
 ```{image} ../_static/clima1/clima1_14.png
 :width: 100%
 :align: center
