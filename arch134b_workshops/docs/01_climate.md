@@ -1,6 +1,10 @@
 # Climate Analysis
 
-Before you start doing architecture design, it is important to understand the location of the site. One way to do this is to analyze the weather data that is available for the site. In this tutorial, we will learn where to find the weather files and which program can help us visualize and understand the data.
+Before you start an architectural design, it is important to know the location of the site. One way to do this is to analyze the weather data that is available for the site. 
+
+Weather data can inform us how a building performs under physical and thermal contexts. Understanding weather variables such as temperature, relative humdity, solar radiation, wind is essential because they all influence building energy use in some way.
+
+In this tutorial, we will learn where to find the weather files and which program can help us visualize and understand the data.
 
 ## Where can I find weather files?
 Weather data is most commonly stored in .epw files. There are other formats such as .wea for daylight simulation by Daysim. You can get .epw files from these two main websites:
